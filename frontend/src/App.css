@@ -1,0 +1,16 @@
+/* App Global Styles */
+#root {
+  background: #2c3e50;
+  min-height: 100vh;
+}
+
+body {
+  background: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background: #2c3e50;
+  color: white;
+}
