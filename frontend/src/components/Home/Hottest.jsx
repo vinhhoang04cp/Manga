@@ -1,111 +1,21 @@
 import React, { useState } from 'react';
 import '../../assets/styles/components/Home/Hottest.css';
+import { hottestManga } from '../../data/mangaData';
+import { renderStars, useCarouselNavigation, getPaginatedItems, getTotalPages } from '../../utils/helpers.jsx';
 
 const Hottest = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Sample data - dữ liệu mẫu theo ảnh
-  const mangaData = [
-    {
-      id: 1,
-      title: "CHÚ THUẬT HỒI CHIẾN",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
-      rating: 4.2,
-      views: "48.11K lượt xem",
-      chapters: [
-        { name: "Chapter 273.4", time: "9 tháng trước" },
-        { name: "Chapter 273.3", time: "9 tháng trước" }
-      ]
-    },
-    {
-      id: 2,
-      title: "NÀNG NỔI LOẠN X CHÀNG THỢ MAY",
-      image: "https://images.unsplash.com/photo-1613376023733-0a73315d9b06?w=300&h=400&fit=crop",
-      rating: 2.5,
-      views: "141.22K lượt xem",
-      chapters: [
-        { name: "Chapter 116", time: "2 tháng trước" },
-        { name: "Chapter 115 (END)", time: "6 tháng trước" }
-      ]
-    },
-    {
-      id: 3,
-      title: "VÔ LUYỆN ĐỈNH PHONG",
-      image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=300&h=400&fit=crop",
-      rating: 3.3,
-      views: "66.4M lượt xem",
-      chapters: [
-        { name: "Chapter #4845", time: "6 ngày trước" },
-        { name: "Chapter 4844", time: "1 tháng trước" }
-      ]
-    },
-    {
-      id: 4,
-      title: "THÁM TỬ LỪNG DANH CONAN",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
-      rating: 4.8,
-      views: "89.3K lượt xem",
-      chapters: [
-        { name: "Chapter 1120", time: "3 ngày trước" },
-        { name: "Chapter 1119", time: "1 tuần trước" }
-      ]
-    },
-    {
-      id: 5,
-      title: "ONE PIECE",
-      image: "https://images.unsplash.com/photo-1613376023733-0a73315d9b06?w=300&h=400&fit=crop",
-      rating: 4.9,
-      views: "250M lượt xem",
-      chapters: [
-        { name: "Chapter 1095", time: "1 ngày trước" },
-        { name: "Chapter 1094", time: "1 tuần trước" }
-      ]
-    },
-    {
-      id: 6,
-      title: "ATTACK ON TITAN",
-      image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=300&h=400&fit=crop",
-      rating: 4.7,
-      views: "180M lượt xem",
-      chapters: [
-        { name: "Chapter 139 (END)", time: "2 năm trước" },
-        { name: "Chapter 138", time: "2 năm trước" }
-      ]
-    }
-  ];
-
+  
   const itemsPerSlide = 3;
-  const totalSlides = Math.ceil(mangaData.length / itemsPerSlide);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  const totalSlides = getTotalPages(hottestManga.length, itemsPerSlide);
+  const { next: nextSlide, prev: prevSlide } = useCarouselNavigation(
+    currentSlide, 
+    totalSlides, 
+    setCurrentSlide
+  );
 
   const getCurrentItems = () => {
-    const start = currentSlide * itemsPerSlide;
-    const end = start + itemsPerSlide;
-    return mangaData.slice(start, end);
-  };
-
-  const renderStars = (rating) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-
-    for (let i = 0; i < 5; i++) {
-      if (i < fullStars) {
-        stars.push(<span key={i} className="star filled">★</span>);
-      } else if (i === fullStars && hasHalfStar) {
-        stars.push(<span key={i} className="star half">★</span>);
-      } else {
-        stars.push(<span key={i} className="star empty">★</span>);
-      }
-    }
-    return stars;
+    return getPaginatedItems(hottestManga, currentSlide, itemsPerSlide);
   };
 
   return (

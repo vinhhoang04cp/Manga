@@ -1,61 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import '../../assets/styles/components/Home/Carousel.css';
+import { carouselSlides } from '../../data/mangaData';
+import { useCarouselNavigation } from '../../utils/helpers.jsx';
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Sample manga data based on the website
-  const slides = [
-    {
-      id: 1,
-      title: "TRUYỆN NHẬT BẢN",
-      image: "https://phongvu.vn/cong-nghe/wp-content/uploads/sites/2/2018/07/hinh-nen-full-hd-cho-laptop-1.jpg", // Naruto image
-      description: "Manga Nhật Bản"
-    },
-    {
-      id: 2,
-      title: "TRUYỆN HÀN QUỐC", 
-      image: "https://phongvu.vn/cong-nghe/wp-content/uploads/sites/2/2018/07/hinh-nen-full-hd-cho-laptop-1.jpg", // Dragon Ball image
-      description: "Manhwa Hàn Quốc"
-    },
-    {
-      id: 3,
-      title: "TRUYỆN TRUNG QUỐC",
-      image: "https://phongvu.vn/cong-nghe/wp-content/uploads/sites/2/2018/07/hinh-nen-full-hd-cho-laptop-1.jpg", // Demon Slayer image
-      description: "Manhua Trung Quốc"
-    },
-    {
-      id: 4,
-      title: "TRUYỆN VIỆT NAM",
-      image: "https://phongvu.vn/cong-nghe/wp-content/uploads/sites/2/2018/07/hinh-nen-full-hd-cho-laptop-1.jpg", // Demon Slayer image
-      description: "Manhua Việt Nam"
-    }
-    
-  ];
+  const { next: nextSlide, prev: prevSlide } = useCarouselNavigation(
+    currentSlide, 
+    carouselSlides.length, 
+    setCurrentSlide
+  );
 
   // Auto play carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  }, []);
 
   const getPrevIndex = () => {
-    return (currentSlide - 1 + slides.length) % slides.length;
+    return (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
   };
 
   const getNextIndex = () => {
-    return (currentSlide + 1) % slides.length;
+    return (currentSlide + 1) % carouselSlides.length;
   };
 
   return (
@@ -64,7 +34,7 @@ const Carousel = () => {
       <div className="carousel-title">
         <h2>
           <span className="title-main">TRUYỆN</span>
-          <span className="title-accent">{slides[currentSlide].title.split(' ')[1]} {slides[currentSlide].title.split(' ')[2] || ''}</span>
+          <span className="title-accent">{carouselSlides[currentSlide].title.split(' ')[1]} {carouselSlides[currentSlide].title.split(' ')[2] || ''}</span>
         </h2>
       </div>
 
@@ -82,7 +52,7 @@ const Carousel = () => {
 
         {/* Carousel Slides */}
         <div className="carousel-slides">
-          {slides.map((slide, index) => {
+          {carouselSlides.map((slide, index) => {
             let slideClass = 'slide-item';
             
             // Determine slide position relative to current slide
