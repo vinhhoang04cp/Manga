@@ -1,16 +1,92 @@
 /* App Global Styles */
 #root {
-  background: #2c3e50;
+  background: var(--primary-bg);
   min-height: 100vh;
+  color: var(--text-primary);
 }
 
 body {
-  background: #2c3e50;
+  background: var(--primary-bg);
   margin: 0;
   padding: 0;
 }
 
 main {
-  background: #2c3e50;
-  color: white;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-bg);
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Common Component Patterns */
+.page-section {
+  padding: var(--space-16) 0;
+  background: var(--primary-bg);
+}
+
+.page-header {
+  background: var(--primary-bg);
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+.content-wrapper {
+  max-width: var(--container-2xl);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+/* Loading States */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--bg-secondary);
+  border-top: 2px solid var(--primary-blue);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error States */
+.error {
+  color: var(--primary-red);
+  text-align: center;
+  padding: var(--space-8);
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid var(--primary-red);
+  border-radius: var(--radius-md);
+  margin: var(--space-4) 0;
+}
+
+/* Success States */
+.success {
+  color: var(--accent-green);
+  text-align: center;
+  padding: var(--space-8);
+  background: rgba(39, 174, 96, 0.1);
+  border: 1px solid var(--accent-green);
+  border-radius: var(--radius-md);
+  margin: var(--space-4) 0;
 }

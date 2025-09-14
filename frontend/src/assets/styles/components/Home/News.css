@@ -1,15 +1,15 @@
 /* News Section Styles */
 .news-section {
-  background-color: #1e293b;
-  color: #ffffff;
-  padding: 60px 0;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: var(--space-16) 0;
   position: relative;
 }
 
 .news-container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
 }
 
 /* Header Section */
@@ -17,9 +17,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-10);
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-5);
 }
 
 .news-title-section {
@@ -27,7 +27,7 @@
 }
 
 .news-title {
-  font-size: 28px;
+  font-size: var(--font-3xl);
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 8px 0;

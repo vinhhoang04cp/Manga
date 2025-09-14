@@ -1,14 +1,14 @@
 /* Hottest Section Styles */
 .hottest-section {
-  background: #2c3e50;
-  padding: 50px 0;
+  background: var(--primary-bg);
+  padding: var(--space-12) 0;
   min-height: 450px;
 }
 
 .hottest-section .container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
 }
 
 /* Header Section */
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-10);
 }
 
 .header-content {
@@ -24,10 +24,10 @@
 }
 
 .section-title {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
+  color: var(--text-primary);
+  font-size: var(--font-5xl);
+  font-weight: var(--font-bold);
+  margin: 0 0 var(--space-3) 0;
   position: relative;
 }
 

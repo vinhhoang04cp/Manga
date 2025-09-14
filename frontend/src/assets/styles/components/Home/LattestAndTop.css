@@ -1,20 +1,20 @@
 /* Latest and Top Section Styles */
 .latest-and-top-section {
-  background: #2c3e50;
-  padding: 50px 0;
+  background: var(--primary-bg);
+  padding: var(--space-12) 0;
   min-height: 800px;
 }
 
 .latest-and-top-section .container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
 }
 
 /* Two Column Layout */
 .two-column-layout {
   display: flex;
-  gap: 50px;
+  gap: var(--space-12);
   align-items: flex-start;
 }
 
@@ -27,7 +27,7 @@
   flex: 1;
   min-width: 320px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 20px;
 }
 

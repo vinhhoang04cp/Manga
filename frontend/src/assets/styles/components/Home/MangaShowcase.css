@@ -1,20 +1,18 @@
 /* Manga Showcase Component Styles */
 .manga-showcase {
-  background-color: #1e293b;
-  color: #ffffff;
-  padding: 15px 0; /* Giảm từ 50px xuống 15px (giảm 35px) */
-  /* Đảm bảo không gây conflict với layout */
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: var(--space-4) 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  /* Tránh overflow issues */
   overflow-x: hidden;
 }
 
 .showcase-container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
   box-sizing: border-box;
 }
 
@@ -23,9 +21,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px; /* Giảm từ 32px */
+  margin-bottom: var(--space-6);
   flex-wrap: wrap;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
 .showcase-title-section {

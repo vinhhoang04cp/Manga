@@ -1,30 +1,30 @@
 /* Hero Carousel Styles */
 .hero-carousel {
-  background: #2c3e50;
-  padding: 60px 0;
+  background: var(--primary-bg);
+  padding: var(--space-16) 0;
   text-align: center;
 }
 
 /* Title */
 .carousel-title {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-10);
 }
 
 .carousel-title h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-5xl);
   margin: 0;
   line-height: 1;
 }
 
 .title-main {
-  color: white;
-  font-weight: 600;
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
   display: block;
 }
 
 .title-accent {
-  color: #ff4757;
-  font-weight: 700;
+  color: var(--primary-red);
+  font-weight: var(--font-bold);
   display: block;
 }
 
@@ -33,8 +33,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
+  gap: var(--space-8);
+  max-width: var(--container-xl);
   margin: 0 auto;
   position: relative;
 }
@@ -43,7 +43,7 @@
 .carousel-slides {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-5);
   position: relative;
   width: 700px;
   height: 240px;
@@ -51,10 +51,10 @@
 }
 
 .slide-item {
-  border-radius: 15px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s ease;
+  box-shadow: var(--shadow-xl);
+  transition: var(--transition-slow);
   position: absolute;
   cursor: pointer;
 }

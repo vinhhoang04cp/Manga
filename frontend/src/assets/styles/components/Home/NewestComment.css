@@ -1,33 +1,33 @@
 /* Newest Comment Component Styles */
 .newest-comment {
-  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
-  color: #ffffff;
-  padding: 60px 0;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 50%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  padding: var(--space-16) 0;
   position: relative;
   overflow: hidden;
 }
 
 .newest-comment-container {
-  max-width: 1400px;
+  max-width: var(--container-2xl);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
   display: flex;
   align-items: flex-start;
-  gap: 60px;
+  gap: var(--space-16);
 }
 
 /* Character Section */
 .comment-character {
-  flex: 0 0 300px; /* Giảm từ 400px xuống 300px */
+  flex: 0 0 300px;
   position: relative;
 }
 
 .character-image {
   width: 100%;
-  height: 300px; /* Fixed height để tạo hình vuông */
+  height: 300px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
   transition: transform 0.3s ease;
 }
 
