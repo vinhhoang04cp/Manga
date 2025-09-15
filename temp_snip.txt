@@ -1,0 +1,8 @@
+export default function HottestManga() {
+  const [active, setActive] = useState("month")
+
+  // Demo: dùng cùng dữ liệu cho mọi tab; có thể thay bằng API/filter thật
+  const list = useMemo(() => hottestManga || [], [active])
+
+  return (
+    <div className="app-container">
