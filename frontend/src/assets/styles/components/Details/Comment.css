@@ -1,0 +1,51 @@
+﻿/* Details Comment Section */
+.details-comment { padding: var(--space-12) 0; background: var(--primary-bg); color: var(--text-primary); }
+
+.cmt-grid { display: grid; grid-template-columns: 1fr 380px; gap: var(--space-8); align-items: start; }
+@media (max-width: 1024px) { .cmt-grid { grid-template-columns: 1fr; } }
+
+/* Left side */
+.cmt-left { background: rgba(255,255,255,.03); border: 1px solid var(--bg-tertiary); border-radius: 14px; min-height: 420px; }
+.cmt-header { padding: var(--space-5) var(--space-6) var(--space-4); border-bottom: 1px solid var(--bg-tertiary); }
+.cmt-title { margin: 0; font-size: var(--font-2xl); font-weight: var(--font-extrabold); }
+
+.cmt-empty { display: flex; align-items: center; gap: 12px; padding: var(--space-8) var(--space-6); color: var(--text-secondary); }
+.cmt-mascot { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #e1f0ff1a; box-shadow: inset 0 0 0 2px rgba(116,185,255,.45); }
+.cmt-mascot .face { font-size: 24px; }
+.cmt-empty .link { color: var(--primary-blue); text-decoration: none; }
+.cmt-empty .link:hover { color: var(--primary-red); }
+
+/* Right side (Top Theo Dõi) */
+.cmt-right { background: rgba(255,255,255,.05); border-radius: 12px; padding: 20px; }
+.cmt-r-accent { width: 48px; height: 4px; background: var(--primary-red); border-radius: 6px; margin-bottom: .5rem; }
+.cmt-r-title { margin: 0; font-size: var(--font-2xl); }
+.cmt-r-sub { margin: .25rem 0 var(--space-4); color: var(--text-muted); font-size: var(--font-sm); }
+
+.cmt-tabs { display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 14px; }
+.cmt-tab { padding: 10px 16px; background: transparent; color: #b8c5d6; border: none; border-bottom: 2px solid transparent; cursor: pointer; font-weight: 500; }
+.cmt-tab.active { color: #74b9ff; border-bottom-color: #74b9ff; }
+
+.cmt-top-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.cmt-top-item { display: grid; grid-template-columns: 40px 50px 1fr; gap: 12px; align-items: center; padding: 8px; border-radius: 8px; }
+.cmt-top-item:hover { background: rgba(255,255,255,.05); }
+.cmt-rank { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; }
+.cmt-rank.rank-1 { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.cmt-rank.rank-2 { background: linear-gradient(135deg, #FF6B6B, #E55353); }
+.cmt-rank.rank-3 { background: linear-gradient(135deg, #4ECDC4, #45B7B8); }
+.cmt-rank.rank-4, .cmt-rank.rank-5, .cmt-rank.rank-6 { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.cmt-cover { width: 50px; height: 65px; border-radius: 6px; object-fit: cover; }
+
+.cmt-meta { min-width: 0; }
+.cmt-name { margin: 0 0 4px; color: var(--text-primary); font-size: .95rem; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.cmt-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.stars { display: flex; gap: 1px; }
+.star { font-size: 12px; }
+.star.filled { color: #ffd700; }
+.star.half { background: linear-gradient(90deg, #ffd700 50%, #666 50%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.star.empty { color: #666; }
+.cmt-views { background: rgba(255,255,255,.1); color: #b8c5d6; padding: 2px 6px; border-radius: 8px; font-size: .7rem; font-weight: 500; }
+
+.cmt-bottom { display: flex; justify-content: space-between; align-items: center; }
+.cmt-chap { color: #74b9ff; text-decoration: none; font-size: .85rem; }
+.cmt-chap:hover { color: #0984e3; }
+.cmt-time { color: #999; font-size: .75rem; }
