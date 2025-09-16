@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import Details from './Details.jsx'
 import HottestManga from './HottestManga.jsx'
+import Category from './Category.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/details" element={<Details />} />
         <Route path="/hottest" element={<HottestManga />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </Router>
   </StrictMode>,
