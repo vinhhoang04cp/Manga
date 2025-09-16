@@ -11,7 +11,7 @@ const SUGGESTED_MANGA = [
     rating: 3.6,
     chapter: 'Chapter #12',
     time: '10 giờ trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Gacha'
+    cover: 'https://otakusan.net/Content/Img/240429/bi-phan-boi-boi-dong-doi-va-so-huu-ky-nang-gacha-cap-ex-nen-toi-se-tao-ra-mot-quoc-gia-toan-nhung-co-vo-xinh-dep-de-tra-thu-chung-2.jpg'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const SUGGESTED_MANGA = [
     rating: 4.0,
     chapter: 'Chapter #12',
     time: '11 giờ trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Knight'
+    cover: 'https://otakusan.net/Content/Img/240429/ky-si-chuyen-sinh-bi-luu-day-tro-nen-vo-dich-voi-suc-manh-cua-chua-te-rong-2.jpg'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const SUGGESTED_MANGA = [
     rating: 4.0,
     chapter: 'Chapter #9',
     time: '12 giờ trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Healer'
+    cover: 'https://otakusan.net/Content/Img/240429/phap-su-hoi-phuc-bi-duoi-khoi-to-doi-vi-khong-the-su-dung-phep-thuat-thong-thuong-nhung-lai-so-huu-mot-ky-nang-dac-biet-goi-la-ghi-chep-vo-han-2.jpg'
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const SUGGESTED_MANGA = [
     rating: 4.0,
     chapter: 'Chapter #5',
     time: '12 giờ trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Beast+Tamer'
+    cover: 'https://otakusan.net/Content/Img/240429/beast-tamer-nguoi-thuan-hoa-manh-nhat-gap-duoc-co-gai-tai-meo-thuoc-chung-toc-manh-nhat-2.jpg'
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const SUGGESTED_MANGA = [
     rating: 3.8,
     chapter: 'Chapter #173',
     time: '13 giờ trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Mikadono'
+    cover: 'https://otakusan.net/Content/Img/240429/ba-chi-em-nha-mikadono-de-do-lam-2.jpg'
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const SUGGESTED_MANGA = [
     rating: 4.0,
     chapter: 'Chapter #155',
     time: '1 ngày trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Doraemon'
+    cover: 'https://otakusan.net/Content/Img/240429/doi-quan-doraemon-dac-biet-2.jpg'
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ const SUGGESTED_MANGA = [
     rating: 3.4,
     chapter: 'Chapter 65',
     time: '2 ngày trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Jilbagias'
+    cover: 'https://otakusan.net/Content/Img/240429/that-hoang-tu-quy-jilbagias-ke-thua-di-san-cua-ke-manh-nhat-2.jpg'
   },
   {
     id: 8,
@@ -67,7 +67,7 @@ const SUGGESTED_MANGA = [
     rating: 3.2,
     chapter: 'Chapter 218',
     time: '2 ngày trước',
-    cover: 'https://placehold.co/360x480/jpg?text=Vinland'
+    cover: 'https://otakusan.net/Content/Img/240429/vinland-saga-2.jpg'
   }
 ]
 

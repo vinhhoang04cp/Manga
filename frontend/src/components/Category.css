@@ -73,8 +73,8 @@
 .cards-rail{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(220px, 1fr);
-  gap: var(--gap);
+  grid-auto-columns: minmax(180px, 1fr);
+  gap: 24px;
   overflow-x: auto;
   padding-bottom: 8px;
   scroll-snap-type: x mandatory;
