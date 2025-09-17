@@ -164,7 +164,7 @@ function App() {
         <section className="manga-section">
           <div className="section-head">
             <div className="section-titles">
-              <h2 className="section-title">DC Comics</h2>
+              <h2 className="section-title">MANGA</h2>
               <p className="section-subtitle">Gợi ý theo sở thích của bạn.</p>
             </div>
 
@@ -220,7 +220,7 @@ function App() {
         <section className="manga-section">
           <div className="section-head">
             <div className="section-titles">
-              <h2 className="section-title">Manhwa</h2>
+              <h2 className="section-title">MANGA</h2>
               <p className="section-subtitle">Gợi ý theo sở thích của bạn.</p>
             </div>
 
@@ -276,7 +276,7 @@ function App() {
         <section className="manga-section">
           <div className="section-head">
             <div className="section-titles">
-              <h2 className="section-title">Truyện Trung Quốc</h2>
+              <h2 className="section-title">MANGA</h2>
               <p className="section-subtitle">Gợi ý theo sở thích của bạn.</p>
             </div>
 
